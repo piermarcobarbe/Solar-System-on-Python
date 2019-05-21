@@ -73,6 +73,7 @@ def start():
     start_write1.color('white')
     start_write.write('Press RETURN to start the simulation.', font=(80))
     start_write1.write('WELCOME TO THE SOLAR SYSTEM SIMULATION!', font=(100))
+    screen.mainloop()
 
 
 def hide_start():
@@ -331,7 +332,6 @@ def move_planets_debug():
 
 
 #keys inputs
-start()
 screen.onkey(move_planets_superspeed, "Up")
 screen.onkey(move_planets_orbitsonly, "Right")
 screen.onkey(move_planets_slowly, "Down")
@@ -343,4 +343,6 @@ screen.onkey(move_planets_debug, "D")
 screen.onclick(inf_planets)
 
 screen.listen()
+
+start()
 
